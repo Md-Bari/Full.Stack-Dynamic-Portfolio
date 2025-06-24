@@ -1,0 +1,84 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav .logo span {
+      color: orange;
+    }
+    nav .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+    nav .btn {
+      padding: 10px 20px;
+      background: orange;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    .hero-text h3 {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero-text p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+    .hero-text .btn {
+      background: #ff5722;
+    }
+    .hero-image {
+      max-width: 40%;
+    }
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin-right: 10px;
+      color: #333;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .btn{
+      height: 35px;
+      font-weight: 500;
+      
+    
+    }
