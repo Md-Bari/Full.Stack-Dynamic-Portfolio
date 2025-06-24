@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>@yield('title', 'Portfolio - Laravel Developer')</title>
+  <title>Testimonials - Laravel Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 </head>
@@ -21,8 +21,10 @@
     <button class="btn">Download CV</button>
   </nav>
 
-  <div>
-    @yield('content')
-  </div>
+  <section class="testimonials">
+    <h1>Testimonials</h1>
+    <p>"Md Rofiqul is an excellent developer. Delivered our project on time and with great quality!" - Client A</p>
+    <p>"Highly professional and communicative, would recommend him for Laravel projects." - Client B</p>
+  </section>
 </body>
 </html>
