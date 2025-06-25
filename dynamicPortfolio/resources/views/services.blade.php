@@ -1,35 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services - Laravel Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
-</head>
-<body>
-  <nav>
-    <div class="logo"><span>R</span>afiqul</div>
-    <div class="nav-links">
-      <a href="{{ url('/') }}">Home</a>
-      <a href="{{ url('/about') }}">About</a>
-      <a href="{{ url('/services') }}">Services</a>
-      <a href="{{ url('/projects') }}">Projects</a>
-      <a href="{{ url('/testimonials') }}">Testimonials</a>
-      <a href="{{ url('/contact') }}">Contact Us</a>
-    </div>
-    <button class="btn">Download CV</button>
-  </nav>
+@extends('index')
+@section('content')
 
-  <section class="services">
+<!-- Add Font Awesome (only once in your layout, if not added already) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section class="services">
     <h1>My Services</h1>
-    <ul>
-      <li>Custom Laravel Web Development</li>
-      <li>RESTful API Development</li>
-      <li>Website Maintenance & Support</li>
-      <li>Database Design and Optimization</li>
-      <li>Front-end Development with Blade & Vue.js</li>
+    <ul class="service-list">
+        <li><i class="fas fa-code"></i> Custom Laravel Web Development</li>
+        <li><i class="fas fa-plug"></i> RESTful API Development</li>
+        <li><i class="fas fa-tools"></i> Website Maintenance & Support</li>
+        <li><i class="fas fa-database"></i> Database Design and Optimization</li>
+        <li><i class="fab fa-vuejs"></i> Front-end Development with Blade & Vue.js</li>
     </ul>
-  </section>
-</body>
-</html>
+</section>
+
+<style>
+.services {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.service-list li {
+    font-size: 18px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.service-list i {
+    margin-right: 12px;
+    color: #0d6efd;
+    min-width: 24px;
+    font-size: 20px;
+}
+</style>
+
+@endsection
