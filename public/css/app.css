@@ -1,188 +1,67 @@
- .navbar {
-      background: #1f1f2e;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
+/* Layout.css – Global Styles for Navbar and Layout */
 
-    .navbar-brand {
-      font-size: 1.6rem;
-      color: #ffffff;
-      font-weight: bold;
-    }
-
-    .navbar-brand span {
-      color: #0dcaf0;
-    }
-
-    .nav-link {
-      color: #ffffff !important;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      transition: color 0.3s ease-in-out;
-    }
-
-    .nav-link:hover {
-      color: #0dcaf0 !important;
-    }
-
-    .btn-cv {
-      background-color: #0dcaf0;
-      color: #1f1f2e;
-      font-weight: bold;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-cv:hover {
-      background-color: #0bb4da;
-    }
-
-    @media (max-width: 991.98px) {
-      .navbar-collapse {
-        background-color: #1f1f2e;
-        padding: 1rem;
-        border-radius: 0 0 10px 10px;
-      }
-
-      .navbar-nav .nav-link {
-        padding: 0.5rem 0;
-        text-align: center;
-      }
-
-      .btn-cv {
-        width: 100%;
-        margin-top: 1rem;
-      }
-    }
-/* HERO SECTION BACKGROUND */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 5%;
-  background: linear-gradient(135deg, #1f1f2e 0%, #2c3e50 100%);
-  color: #fff;
-  flex-wrap: wrap;
-}
-
-/* HERO TEXT STYLING */
-.hero-text {
-  flex: 1;
-  min-width: 280px;
-  max-width: 50%;
-}
-
-.hero-text h3 {
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin: 10px 0;
-}
-
-.hero-text p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #ddd;
-}
-
-.hero-text .btn {
-  background-color: orangered;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  transition: 0.3s;
-}
-
-.hero-text .btn:hover {
-  background-color: #ff5722;
-}
-
-/* IMAGE STYLING */
-.hero-image {
-  flex: 1;
-  min-width: 280px;
-  text-align: center;
-  position: relative;
-}
-
-.image-wrapper {
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 6px solid orangered;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* SOCIAL ICONS */
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.4rem;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: orangered;
-}
-
-/* FLOATING PROJECT CARDS */
-.project-floats {
-  padding: 60px 5%;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
   color: #333;
 }
 
-.floating-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #3f5efb, #fc466b);
+  padding: 1rem 2rem;
 }
 
-.float-card {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px 40px;
-  width: 200px;
-  transition: transform 0.3s ease;
-}
-
-.float-card:hover {
-  transform: translateY(-10px);
-}
-
-.float-card h3 {
-  color: orangered;
-  font-size: 1.2rem;
-}
-
-.float-card p {
-  font-size: 1.8rem;
+.navbar-brand {
+  font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: #fff;
+}
+
+.navbar-brand span {
+  color: #ffc107;
+}
+
+.nav-link {
+  color: #f1f1f1 !important;
+  font-weight: 500;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* CV Download Button */
+.btn-cv {
+  background: #fff;
+  color: #fc466b;
+  font-weight: 600;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+  background: #fc466b;
+  color: #fff;
+}
+
+/* Responsive Nav Button Alignment */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .btn-cv {
+    margin-top: 10px;
+  }
 }

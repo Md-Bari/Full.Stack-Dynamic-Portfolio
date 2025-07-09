@@ -19,3 +19,4 @@ Route::view('/services', 'services');
 Route::view('/projects', 'projects');
 Route::view('/testimonials', 'testimonials');
 Route::view('/contact', 'contact');
+Route::view('/academic', 'academic');
