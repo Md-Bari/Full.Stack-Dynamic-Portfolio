@@ -15,10 +15,7 @@
         <h1>Laravel Developer</h1>
         <p>Here is a professional Laravel Developer who can develop any type of web page using Laravel for you.</p>
         <a href="{{ url('/about') }}" class="btn">See My Work</a>
-
-
     </div>
-
     <div class="hero-image">
         <div class="image-decor">
             <div class="blob-background"></div>
@@ -50,6 +47,33 @@
             <h3>Clients</h3>
             <p>10+</p>
         </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="container project-grid">
+        @foreach (['project1', 'project2', 'project3'] as $project)
+        <div class="project-card">
+            <img src="{{ asset("assets/images/p4.jpg") }}" alt="{{ $project }}" class="project-img">
+            <h3>{{ ucfirst($project) }}</h3>
+            <p>Short description about {{ $project }} project.</p>
+        </div>
+        @endforeach
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="container skills-grid">
+        @foreach (['laravel', 'vue', 'mysql', 'git', 'api'] as $skill)
+        <div class="skill-card">
+            <img src="{{ asset("assets/skills/{$skill}.png") }}" alt="{{ $skill }} logo">
+            <p>{{ strtoupper($skill) }}</p>
+        </div>
+        @endforeach
     </div>
 </section>
 

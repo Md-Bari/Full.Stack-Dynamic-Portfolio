@@ -57,6 +57,41 @@
   <div>
     @yield('content')
   </div>
+  <!-- Footer -->
+  <footer class="site-footer mt-5">
+    <div class="container py-4">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5 class="footer-logo"><span>Rafiqul</span>Shitol</h5>
+          <p class="text-muted">A passionate Laravel developer delivering clean and modern web solutions.</p>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h6 class="text-uppercase fw-bold mb-2">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ url('/about') }}">About</a></li>
+            <li><a href="{{ url('/projects') }}">Projects</a></li>
+            <li><a href="{{ url('/contact') }}">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h6 class="text-uppercase fw-bold mb-2">Follow Me</h6>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="text-center small text-muted">
+        © {{ date('Y') }} Md Rofiqul Bari Shitol. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"

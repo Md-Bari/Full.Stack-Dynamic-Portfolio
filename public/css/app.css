@@ -50,6 +50,63 @@ body {
   background: #fc466b;
   color: #fff;
 }
+.site-footer {
+  background-color: #0c223f;
+  color: #ccc;
+  padding-top: 40px;
+}
+
+.site-footer h5,
+.site-footer h6 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.site-footer .footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.site-footer .footer-logo span {
+  color: orangered;
+}
+
+.site-footer a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: orangered;
+}
+
+.footer-social a {
+  margin-right: 12px;
+  color: #bbb;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: orangered;
+}
+
+.site-footer hr {
+  border-color: #444;
+  margin: 20px 0;
+}
+
+@media (max-width: 576px) {
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
 
 /* Responsive Nav Button Alignment */
 @media (max-width: 991.98px) {
