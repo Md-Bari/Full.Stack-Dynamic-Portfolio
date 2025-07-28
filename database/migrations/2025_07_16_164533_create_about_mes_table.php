@@ -12,15 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('about_me', function (Blueprint $table) {
-    $table->id();
-    $table->string('title');
-    $table->string('subtitle')->nullable();
-    $table->text('description');
-    $table->string('profile_image')->nullable();
-    $table->string('resume_link')->nullable();
-    $table->timestamps();
-});
+            $table->id();
+            $table->unsignedBigInteger('user_id'); // unsignedBigInteger for foreign key to users.id
+            $table->text('description')->nullable();
+            $table->string('blood_group')->nullable();
+            $table->string('department');
+            $table->integer('age')->nullable();
+            $table->date('dob')->nullable();
+            $table->string('address')->nullable();
+            $table->enum('gender', ['male', 'female', 'other'])->nullable();
+            $table->timestamps();
 
+            // Add the foreign key constraint here inside the create table closure
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
     }
 
     /**
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('about_mes');
+        Schema::dropIfExists('about_me');
     }
 };

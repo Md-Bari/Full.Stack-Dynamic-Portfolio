@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('skills', function (Blueprint $table) {
+        Schema::create('experiences', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('name');
-            $table->enum('type', ['technical', 'soft']);
-            $table->enum('level', ['beginner', 'intermediate', 'expert']);
-            $table->string('logo')->nullable();
+            $table->enum('type', ['job', 'internship', 'freelance', 'volunteer']);
+            $table->string('designation');
+            $table->string('organization');
+            $table->date('from_date');
+            $table->date('to_date')->nullable();
             $table->timestamps();
         });
-        Schema::table('skills', function (Blueprint $table) {
+        Schema::table('experiences', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('skills');
+        Schema::dropIfExists('experiences');
     }
 };

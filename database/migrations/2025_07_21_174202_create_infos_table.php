@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('skills', function (Blueprint $table) {
+        Schema::create('infos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('name');
-            $table->enum('type', ['technical', 'soft']);
-            $table->enum('level', ['beginner', 'intermediate', 'expert']);
-            $table->string('logo')->nullable();
+            $table->string('portfolio')->nullable();
+            $table->string('address')->nullable();
+            $table->text('description')->nullable();
+            $table->string('designation')->nullable();
             $table->timestamps();
         });
-        Schema::table('skills', function (Blueprint $table) {
+        Schema::table('infos', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('skills');
+        Schema::dropIfExists('infos');
     }
 };

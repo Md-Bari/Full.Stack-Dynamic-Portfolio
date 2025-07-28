@@ -30,7 +30,8 @@
             margin-bottom: 5px;
         }
         input[type="text"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="email"] {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -53,6 +54,7 @@
         .error {
             color: red;
             text-align: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -60,20 +62,30 @@
 <div class="login-container">
     <h2>Login</h2>
 
-    @if(session('error'))
-        <p class="error">{{ session('error') }}</p>
+    <!-- Display validation errors -->
+    @if ($errors->any())
+        <div class="error">
+            @foreach ($errors->all() as $error)
+                <div>{{ $error }}</div>
+            @endforeach
+        </div>
     @endif
 
-    <form action="{{ route('login.submit') }}" method="POST">
+    <!-- Display session error -->
+    @if (session('error'))
+        <div class="error">{{ session('error') }}</div>
+    @endif
+
+    <form action="{{ route('login') }}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="user_id">User ID</label>
-            <input type="text" name="user_id" id="user_id" required>
+            <label for="email">Email/User ID</label>
+            <input type="text" name="email" id="email" value="{{ old('email') }}" required>
         </div>
 
         <div class="form-group">
-            <label for="apassword">Password</label>
-            <input type="password" name="apassword" id="apassword" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
         </div>
 
         <button type="submit" class="btn-login">Login</button>

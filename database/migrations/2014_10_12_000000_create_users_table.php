@@ -9,15 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id(); // 'id' - auto-incrementing primary key
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->string('phone', 20)->nullable();
+            $table->string('student_id', 50);
+            $table->string('avatar')->nullable(); // store file path for avatar image, nullable if not uploaded
             $table->timestamps();
         });
     }

@@ -13,12 +13,17 @@ return new class extends Migration
     {
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->string('type'); // SSC, HSC, BSc, etc.
             $table->string('name');
-            $table->string('role')->nullable();
-            $table->string('company')->nullable();
-            $table->string('photo')->nullable();
-            $table->text('comment');
+            $table->string('institute');
+            $table->year('enrolled_year');
+            $table->year('passing_year');
+            $table->string('grade');
             $table->timestamps();
+        });
+        Schema::table('testimonials', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
